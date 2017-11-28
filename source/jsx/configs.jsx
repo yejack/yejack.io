@@ -21,7 +21,7 @@ define([], function() {
 
   switch (window.location.host) {
 
-    case 'getaroom.io':
+    case 'yejack.io':
       config = {
         env: 'prod',
         Skylink: {
@@ -31,7 +31,7 @@ define([], function() {
       };
       break;
 
-    case 'dev.getaroom.io':
+    case 'dev.yejack.io.io':
       config = {
         env: 'dev',
         Skylink: {

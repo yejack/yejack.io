@@ -310,7 +310,7 @@ define([
 
           default:
             app.state.room.messages.push({
-              userId: 'getaroom.io',
+              userId: 'yejack.io',
               type: Constants.MessageType.ACTION,
               content: 'Warning: ' + (serverMessage.message || serverMessage),
               date: (new Date()).toISOString()
@@ -343,7 +343,7 @@ define([
       // Handles when socket connection to signaling server encounters app UI exception.
       Skylink.on('channelError', function (error) {
         app.state.room.messages.push({
-          userId: 'getaroom.io',
+          userId: 'yejack.io',
           type: Constants.MessageType.ACTION,
           content: 'Error: ' + (error.message || error),
           date: (new Date()).toISOString()
@@ -455,7 +455,7 @@ define([
       // Handles when stream fails to load.
       Skylink.on('mediaAccessError', function (error, isScreensharing) {
         app.state.room.messages.push({
-          userId: 'getaroom.io',
+          userId: 'yejack.io',
           type: Constants.MessageType.ACTION,
           content: (isScreensharing ? 'Screen' : 'Media') + ': ' + (error.message || error),
           date: (new Date()).toISOString()
@@ -471,7 +471,7 @@ define([
       // Handles when stream loads.
       Skylink.on('mediaAccessSuccess', function (stream, isScreensharing) {
         app.state.room.messages.push({
-          userId: 'getaroom.io',
+          userId: 'yejack.io',
           type: Constants.MessageType.ACTION,
           content: (isScreensharing ? 'Screen' : 'Media') + ': Access has been granted',
           date: (new Date()).toISOString()
@@ -561,7 +561,7 @@ define([
             app.state.room.states.recording = true;
             app.state.room.prevent.recording = true;
             app.state.room.messages.push({
-              userId: 'getaroom.io',
+              userId: 'yejack.io',
               type: Constants.MessageType.ACTION,
               content: 'Recording: (ID: ' + recordingId + ')\nStarted for room. Waiting for minium of 10 seconds before enabling',
               date: (new Date()).toISOString()
@@ -585,7 +585,7 @@ define([
             app.state.room.states.recording = false;
             app.state.room.prevent.recording = false;
             app.state.room.messages.push({
-              userId: 'getaroom.io',
+              userId: 'yejack.io',
               type: Constants.MessageType.ACTION,
               content: 'Recording: (ID: ' + recordingId + ')\nStopped for room. Video is mixing ....',
               date: (new Date()).toISOString()
@@ -594,7 +594,7 @@ define([
 
           case Skylink.RECORDING_STATE.LINK:
             app.state.room.messages.push({
-              userId: 'getaroom.io',
+              userId: 'yejack.io',
               type: Constants.MessageType.ACTION,
               content: 'Recording: (ID: ' + recordingId + ')\nMixing completed. [Download link](' + link.mixin + ')',
               date: (new Date()).toISOString()
@@ -603,7 +603,7 @@ define([
           
           default:
             app.state.room.messages.push({
-              userId: 'getaroom.io',
+              userId: 'yejack.io',
               type: Constants.MessageType.ACTION,
               content: 'Recording: (ID: ' + recordingId + ')\nError. ' + (error.message || error),
               date: (new Date()).toISOString()
@@ -641,7 +641,7 @@ define([
 
           if (screensharing && app.state.users.length > 4) {
             app.state.room.messages.push({
-              userId: 'getaroom.io',
+              userId: 'yejack.io',
               type: Constants.MessageType.ACTION,
               content: 'Room: Current screensharing layout scales up to 4 users, and some of the peers ' +
                 'might not be displayed due to the layout. Current users count is ' + Utils.keys(app.states.users).length,
