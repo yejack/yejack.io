@@ -86,7 +86,7 @@ def browse():
 
 @app.route("/chatroom")
 def chatroom():
-	return render_template("chatroom.html")
+	return render_template("/../index.html")
 
 @app.route("/chatroom_video")
 def chatroom_video():
