@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(morgan('common'));
-app.use(express.static(__dirname + '\improv_app\templates'));
+app.use(express.static(__dirname + '/public'));
 app.use(require('./app/routes'));
 
 const server = http.Server(app);
