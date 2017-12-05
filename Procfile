@@ -1,1 +1,1 @@
-web: node server.js
+web: gunicorn improv_app:app

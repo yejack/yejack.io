@@ -1,26 +1,24 @@
-HiChat
-===
- 
-A chat application built with Node.js and socket.io.
+CSc 47300 Fall 2017 Project: Improv-Chatroom-master
 
-View the live demo: http://hichat.herokuapp.com/
+Front-End: Html/CSS
+Server: FLASK
+Back-end: Python
 
-Features
----
-* send pictures :sunrise:
-* send emojis :smile:
-* keyboard support :musical_keyboard:
-* online users count statistic :ghost:
+To Run The App:
+First: install flask, and flask-wtf (may need create a venv mode)
+Second: python application.py
 
-How to run
----
-1. download the code then extract
-2. run `npm install` from command line window
-3. run `node server` or `iojs server` if you are using [io.js](https://iojs.org/)
-4. finnaly, open your browser and visit `localhost:3000`
+To Run the Test:
+First: Install pytest
+second: run py.test or pytest, either of them work!
+(notes: someone may received error of version problem of flask that related to blinker.
+Solution is install blinker by using pip)
 
-[教程见博客](http://www.cnblogs.com/Wayou/p/hichat_built_with_nodejs_socket.html)
+Deploy Using Heroku:
+https://limitless-island-91246.herokuapp.com/create
 
-![codeship builing status](https://codeship.com/projects/73bd0d90-9897-0131-516c-56598d7b87e5/status?branch=master)
-
-
+Warning: to add/change new style in external file, don't be worried about if the page
+didn't make any change. You need to refresh the css file in website in order make it work in html,
+if this still didn't work, you need to inspect element -> source -> find the css file -> fresh.
+For exmaple, if you change/add something in chatroom.css. Refresh the page of 127.../static/css/chatroom.css
+make sure the change/addition you made is in there, refresh the html page.
